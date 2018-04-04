@@ -7,6 +7,8 @@ import javafx.scene.control.Button;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.FlowPane;
+import javafx.scene.layout.StackPane;
+import javafx.scene.layout.VBox;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
@@ -27,12 +29,13 @@ public class RandomCards extends Application {
 		
 		if(num == 1) {
 			ImageView imgvw = new ImageView(img);
-			
+		
+		VBox vb = new VBox(imgvw);
 		}
 		
 		FlowPane pn = new FlowPane(btn, randnum);
 		pn.setAlignment(Pos.BASELINE_CENTER);
-		Scene sn = new Scene(pn, 800, 600);	
+		Scene sn = new Scene(pn, vb, 800, 600);	
 		stage.setScene(sn);
 		stage.setTitle("Random Playing Cards");
 		stage.show();
